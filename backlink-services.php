@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Competitor Analysis
+ * Template Name: Backlink Services
  *
  * @package digitalgrowth
  */
@@ -19,29 +19,26 @@ get_header();
                             <source media="(max-width: 575px)"
                                 srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/575.jpg">
                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg"
-                                alt="<?php esc_attr_e('Competitor Analysis Services', 'digitalgrowth'); ?>" width="1000"
-                                height="742" loading="lazy">
+                                alt="<?php esc_attr_e('High-Authority Backlink Services', 'digitalgrowth'); ?>"
+                                width="1000" height="742" loading="lazy">
                         </picture>
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="choose-us-content section-headings">
 
                             <h2 class="heading text-50" data-aos="fade-up">
-                                <?php esc_html_e('Competitor Analysis Services in Bangalore — See Exactly How You Stack Up', 'digitalgrowth'); ?>
+                                <?php esc_html_e('High-Authority Backlink Services in Bangalore — Build Links That Actually Move Rankings', 'digitalgrowth'); ?>
                             </h2>
                             <p class="text text-18" data-aos="fade-up">
-                                <?php esc_html_e('Your competitors are ranking above you for a reason. The question is — do you know what that reason is?', 'digitalgrowth'); ?>
+                                <?php esc_html_e('Backlinks are still one of the most powerful ranking factors in SEO. But not all backlinks are created equal — a single link from a trusted, high-traffic website is worth more than hundreds of low-quality links that can actually hurt your rankings.', 'digitalgrowth'); ?>
                             </p>
                             <p class="text text-18" data-aos="fade-up">
-                                <?php esc_html_e('A professional competitor analysis takes the guesswork out of your SEO strategy. Instead of building in the dark, you\'ll see exactly which keywords your competitors rank for, where their traffic comes from, and what content and backlinks are driving their growth — so you can do it better.', 'digitalgrowth'); ?>
-                            </p>
-                            <p class="text text-18" data-aos="fade-up">
-                                <?php esc_html_e('Whether you\'re a local business trying to outrank nearby competitors or a brand competing nationally, our manually reviewed competitor reports give you the intelligence to make smarter, faster decisions.', 'digitalgrowth'); ?>
+                                <?php esc_html_e('At Digital X Growth, we secure genuine editorial backlinks from real, authoritative websites in your niche. No link farms, no PBNs, no shortcuts — just clean, high-quality placements that build your site\'s authority and help you rank higher on Google.', 'digitalgrowth'); ?>
                             </p>
                             <div class="buttons" data-aos="fade-up">
                                 <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
-                                    aria-label="<?php esc_attr_e('Order Now', 'digitalgrowth'); ?>">
-                                    <?php esc_html_e('Order Now', 'digitalgrowth'); ?>
+                                    aria-label="<?php esc_attr_e('View Backlink Plans', 'digitalgrowth'); ?>">
+                                    <?php esc_html_e('View Backlink Plans', 'digitalgrowth'); ?>
                                     <span class="svg-wrapper">
                                         <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +57,7 @@ get_header();
         </div>
     </div>
 
-    <!-- What's Included -->
+    <!-- Why Backlinks Matter -->
     <div class="pricing-plan mt-100">
         <div class="container">
             <div class="section-headings text-center">
@@ -79,7 +76,7 @@ get_header();
                         </defs>
                     </svg>
                     <span>
-                        <?php esc_html_e('What\'s Included', 'digitalgrowth'); ?>
+                        <?php esc_html_e('Why Backlinks Matter', 'digitalgrowth'); ?>
                     </span>
                     <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                         viewBox="0 0 14 14" fill="none">
@@ -97,29 +94,28 @@ get_header();
                 </div>
 
                 <h2 class="heading text-50" data-aos="fade-up">
-                    <?php esc_html_e('What\'s Included in Every Report', 'digitalgrowth'); ?>
+                    <?php esc_html_e('Why Backlinks Matter for Your Business', 'digitalgrowth'); ?>
                 </h2>
                 <p class="text text-18" data-aos="fade-up">
-                    <?php esc_html_e('Every competitor report covers the metrics that actually matter for outranking them.', 'digitalgrowth'); ?>
+                    <?php esc_html_e('If your website isn\'t ranking despite good content and on-page SEO, chances are your backlink profile is the missing piece. Google uses backlinks as votes of confidence — the more authoritative sites that link to you, the more trustworthy your site appears in Google\'s eyes.', 'digitalgrowth'); ?>
                 </p>
             </div>
 
-            <!-- Included items as a checklist -->
+            <!-- Benefits checklist -->
             <div class="section-content">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8">
                         <?php
-                        $included_items = array(
-                            'Keyword & content gap analysis — discover high-value keywords your competitors rank for that you\'re missing',
-                            'Backlink overview — see who\'s linking to them and identify link-building opportunities for your site',
-                            'Traffic & ranking insights — understand where their organic traffic is coming from and which pages drive the most visits',
-                            'Top-performing pages — learn which content is working best for them so you can create something better',
-                            'On-page SEO comparison — benchmark your titles, headings, and content structure against theirs',
+                        $benefits = array(
+                            'Rank higher for competitive keywords',
+                            'Build domain authority over time',
+                            'Drive referral traffic from relevant, high-quality websites',
+                            'Strengthen your overall SEO strategy for long-term growth',
                         );
                         $delay = 90;
                         ?>
                         <ul class="text-lists list-unstyled">
-                            <?php foreach ($included_items as $item): ?>
+                            <?php foreach ($benefits as $benefit): ?>
                                 <li class="text-item text text-18" data-aos="fade-up"
                                     data-aos-delay="<?php echo $delay; ?>">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
@@ -141,7 +137,7 @@ get_header();
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <?php echo esc_html($item); ?>
+                                    <?php echo esc_html($benefit); ?>
                                 </li>
                                 <?php $delay += 50; ?>
                             <?php endforeach; ?>
@@ -171,7 +167,7 @@ get_header();
                         </defs>
                     </svg>
                     <span>
-                        <?php esc_html_e('Pricing Plan', 'digitalgrowth'); ?>
+                        <?php esc_html_e('Our Backlink Plans', 'digitalgrowth'); ?>
                     </span>
                     <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                         viewBox="0 0 14 14" fill="none">
@@ -189,8 +185,11 @@ get_header();
                 </div>
 
                 <h2 class="heading text-50" data-aos="fade-up">
-                    <?php esc_html_e('Choose Your Plan', 'digitalgrowth'); ?>
+                    <?php esc_html_e('Choose Your Backlink Plan', 'digitalgrowth'); ?>
                 </h2>
+                <p class="text text-18" data-aos="fade-up">
+                    <?php esc_html_e('All backlinks are hand-vetted, editorially placed, and sourced from real websites with genuine traffic. We never use automated tools or link networks.', 'digitalgrowth'); ?>
+                </p>
             </div>
 
             <div class="section-content">
@@ -203,43 +202,49 @@ get_header();
 
                         $plans = array(
                             array(
-                                'name' => 'Starter — 5 Competitor Reports',
-                                'desc' => 'Best for: Small businesses and local brands wanting a clear snapshot of their competitive landscape.',
-                                'price' => '₹3,999',
+                                'name' => '🔹 Starter Backlink',
+                                'badge' => 'DR 10+ | Monthly Traffic: 0–1k',
+                                'desc' => 'Best for: New websites, local businesses, and startups building their backlink profile from the ground up.',
+                                'price' => '₹5,499',
                                 'active' => false,
                                 'items' => array(
-                                    'Detailed reports on your top 5 competitors',
-                                    'Keyword & content gap analysis',
-                                    'Backlink overview per competitor',
-                                    'Identify your biggest gaps and quickest wins',
+                                    'Minimum Domain Rating of 10+',
+                                    'Site traffic of up to 1,000 monthly visitors',
+                                    'Editorial, in-content placement (not footer or sidebar)',
+                                    'Niche-relevant website',
+                                    'Anchor text of your choice',
                                 ),
-                                'tagline' => 'Enough to identify your biggest gaps and the quickest wins to act on right away.',
+                                'tagline' => 'A great entry point to start earning your site\'s first authoritative links — giving your domain the early authority boost it needs.',
                             ),
                             array(
-                                'name' => 'Growth — 10 Competitor Reports ⭐ Most Popular',
-                                'desc' => 'Best for: Growing businesses and agencies that need deeper data to build a strong, long-term SEO strategy.',
-                                'price' => '₹6,999',
+                                'name' => '🔸 Growth Backlink ⭐ Most Popular',
+                                'badge' => 'DR 30+ | Monthly Traffic: 1k–10k',
+                                'desc' => 'Best for: Growing businesses and service-based brands that want to compete seriously in their niche.',
+                                'price' => '₹10,499',
                                 'active' => true,
                                 'items' => array(
-                                    'Analyse 10 competitors across keywords, backlinks, traffic & content',
-                                    'Comprehensive view of your entire niche',
-                                    'Top-performing pages & on-page SEO comparison',
-                                    'Identify where the real opportunities lie',
+                                    'Minimum Domain Rating of 30+',
+                                    'Site traffic between 1,000–10,000 monthly visitors',
+                                    'Editorial, in-content placement',
+                                    'Niche-relevant or closely related website',
+                                    'Anchor text and target URL of your choice',
                                 ),
-                                'tagline' => '🚀 Our most popular plan — giving you a comprehensive view of your entire niche.',
+                                'tagline' => 'Mid-tier, high-quality placements that send strong authority signals to Google and make a noticeable impact on your rankings.',
                             ),
                             array(
-                                'name' => 'Pro — 15 Competitor Reports',
-                                'desc' => 'Best for: SEO professionals, e-commerce brands, and businesses in competitive industries that need the full picture.',
-                                'price' => '₹9,999',
+                                'name' => '🔷 Premium Backlink',
+                                'badge' => 'DR 50+ | Monthly Traffic: 10k–50k',
+                                'desc' => 'Best for: Established brands, e-commerce stores, and businesses targeting competitive, high-value keywords.',
+                                'price' => '₹16,499',
                                 'active' => false,
                                 'items' => array(
-                                    'Deep analysis across 15 competitors',
-                                    'Data-rich insights for dominant SEO strategy',
-                                    'Ideal for agencies managing multiple clients',
-                                    'Full keyword, backlink, traffic & content breakdown',
+                                    'Minimum Domain Rating of 50+',
+                                    'Site traffic between 10,000–50,000 monthly visitors',
+                                    'Editorial, in-content placement on a relevant page',
+                                    'Niche-relevant website with genuine organic traffic',
+                                    'Full control over anchor text and target URL',
                                 ),
-                                'tagline' => 'For businesses serious about market leadership — detailed, data-rich, and built to dominate.',
+                                'tagline' => 'The kind of backlink that moves the needle — especially for competitive niches where weaker links simply won\'t cut it.',
                             ),
                         );
 
@@ -251,6 +256,9 @@ get_header();
                                         <h2 class="heading text-24">
                                             <?php echo esc_html($plan['name']); ?>
                                         </h2>
+                                        <p class="text text-16" style="font-weight:600;opacity:.75;">
+                                            <?php echo esc_html($plan['badge']); ?>
+                                        </p>
                                         <p class="text text-16">
                                             <?php echo esc_html($plan['desc']); ?>
                                         </p>
@@ -281,8 +289,8 @@ get_header();
                                     <div class="buttons" data-aos="fade-up">
                                         <a href="<?php echo esc_url(home_url('/contact/')); ?>"
                                             class="button button--primary"
-                                            aria-label="<?php esc_attr_e('Order Reports', 'digitalgrowth'); ?>">
-                                            <?php esc_html_e('Order Reports', 'digitalgrowth'); ?>
+                                            aria-label="<?php esc_attr_e('Order Backlink', 'digitalgrowth'); ?>">
+                                            <?php esc_html_e('Order Backlink', 'digitalgrowth'); ?>
                                             <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.16668 0.833333C2.16668 0.61232 2.25448 0.400358 2.41076 0.244078C2.56704 0.0877975 2.779 0 3.00001 0H9.66668C9.88769 0 10.0997 0.0877975 10.2559 0.244078C10.4122 0.400358 10.5 0.61232 10.5 0.833333V7.5C10.5 7.72101 10.4122 7.93297 10.2559 8.08926C10.0997 8.24554 9.88769 8.33333 9.66668 8.33333C9.44567 8.33333 9.2337 8.24554 9.07742 8.08926C8.92114 7.93297 8.83335 7.72101 8.83335 7.5V2.845L1.92251 9.75583C1.76535 9.90763 1.55484 9.99163 1.33635 9.98973C1.11785 9.98783 0.908839 9.90019 0.754332 9.74568C0.599825 9.59118 0.512184 9.38216 0.510285 9.16367C0.508387 8.94517 0.592382 8.73467 0.744181 8.5775L7.65501 1.66667H3.00001C2.779 1.66667 2.56704 1.57887 2.41076 1.42259C2.25448 1.26631 2.16668 1.05435 2.16668 0.833333Z"
@@ -300,62 +308,124 @@ get_header();
         </div>
     </div>
 
-    <!-- Why Our Reports Are Different / CTA -->
-    <div class="not-sure mt-100">
+    <!-- What Makes Our Backlinks Different — Feature Card Grid -->
+    <div class="mt-100" style="background:var(--color-primary,#1C2539);padding:80px 0;">
         <div class="container">
-            <div class="section-headings text-start">
-                <div class="subheading text-20 subheading-bg" data-aos="fade-up">
-                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#clip0_9088_4143)">
-                            <path
-                                d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 -1.33117e-07 8.0588 0 7C4.62818e-08 5.94119 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                                fill="CurrentColor" />
-                        </g>
-                        <defs>
-                            <clipPath>
-                                <rect width="14" height="14" fill="CurrentColor" />
-                            </clipPath>
-                        </defs>
+
+            <!-- Section heading -->
+            <div class="section-headings text-center" style="margin-bottom:56px;">
+                <div class="subheading text-20 subheading-bg" data-aos="fade-up" style="justify-content:center;color:#fff;opacity:.75;">
+                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <g clip-path="url(#a)"><path d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z" fill="currentColor"/></g>
+                        <defs><clipPath id="a"><rect width="14" height="14" fill="currentColor"/></clipPath></defs>
                     </svg>
-                    <span>
-                        <?php esc_html_e('Why Our Reports Are Different', 'digitalgrowth'); ?>
-                    </span>
-                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#clip0_9088_4143)">
-                            <path
-                                d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 -1.33117e-07 8.0588 0 7C4.62818e-08 5.94119 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                                fill="CurrentColor" />
-                        </g>
-                        <defs>
-                            <clipPath>
-                                <rect width="14" height="14" fill="CurrentColor" />
-                            </clipPath>
-                        </defs>
+                    <span style="color:#fff;"><?php esc_html_e('What Makes Us Different', 'digitalgrowth'); ?></span>
+                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <g clip-path="url(#a)"><path d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z" fill="currentColor"/></g>
                     </svg>
                 </div>
-
-                <h2 class="heading text-50" data-aos="fade-up">
-                    <?php esc_html_e('Ready to See What Your Competitors Are Hiding?', 'digitalgrowth'); ?>
+                <h2 class="heading text-50" data-aos="fade-up" style="color:#fff;">
+                    <?php esc_html_e('What Makes Our Backlinks Different', 'digitalgrowth'); ?>
                 </h2>
-                <p class="text text-18" data-aos="fade-up">
-                    <?php esc_html_e('Most competitor analysis tools spit out raw data and leave you to figure out what it means. Every report we deliver is manually reviewed and verified before it reaches you — so you get clear, accurate insights you can act on immediately, not just numbers on a spreadsheet.', 'digitalgrowth'); ?>
+                <p class="text text-18" data-aos="fade-up" style="color:rgba(255,255,255,.7);max-width:640px;margin:0 auto;">
+                    <?php esc_html_e('There are hundreds of link-building services out there — most selling low-quality placements that do nothing for your rankings. Here\'s what sets us apart.', 'digitalgrowth'); ?>
                 </p>
-                <p class="text text-18" data-aos="fade-up">
-                    <?php esc_html_e('Stop guessing and start strategising. Order your competitor analysis reports today and get a clear, data-backed advantage over your competition.', 'digitalgrowth'); ?>
-                </p>
+            </div>
 
-                <div class="buttons" data-aos="fade-up" data-aos-delay="100">
-                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
-                        aria-label="<?php esc_attr_e('Order Now', 'digitalgrowth'); ?>">
-                        <?php esc_html_e('Order Now', 'digitalgrowth'); ?>
+            <!-- 5 feature cards: 2 on top row, 3 on bottom row -->
+            <?php
+            $features = array(
+                array(
+                    'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                    'title' => 'Hand-Vetted Publishers',
+                    'desc'  => 'Every website is manually reviewed for quality, relevance, and traffic before we approach them for a placement.',
+                ),
+                array(
+                    'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                    'title' => 'No Link Farms or PBNs',
+                    'desc'  => 'We only work with legitimate, independently owned websites. No private blog networks, no expired domain schemes.',
+                ),
+                array(
+                    'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                    'title' => 'Genuine Editorial Placements',
+                    'desc'  => 'Your link appears naturally within real content — not in a sponsored post directory or hidden footer.',
+                ),
+                array(
+                    'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                    'title' => 'Transparent Reporting',
+                    'desc'  => 'You\'ll receive a placement report with the live URL, anchor text, DR, and traffic data for every link delivered.',
+                ),
+                array(
+                    'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                    'title' => 'Niche Relevance',
+                    'desc'  => 'We match your backlinks to websites relevant to your industry, so the links carry context as well as authority.',
+                ),
+            );
+            ?>
+
+            <!-- Row 1: 2 cards centred -->
+            <div class="row justify-content-center" style="gap:0;margin-bottom:24px;">
+                <?php foreach (array_slice($features, 0, 2) as $i => $f): ?>
+                <div class="col-12 col-md-6 col-lg-5" style="padding:12px;" data-aos="fade-up" data-aos-delay="<?php echo $i * 100; ?>">
+                    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
+                        <div style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
+                            <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                        </div>
+                        <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;"><?php echo esc_html($f['title']); ?></h3>
+                        <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;"><?php echo esc_html($f['desc']); ?></p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <!-- Row 2: 3 cards -->
+            <div class="row justify-content-center">
+                <?php foreach (array_slice($features, 2, 3) as $i => $f): ?>
+                <div class="col-12 col-md-6 col-lg-4" style="padding:12px;" data-aos="fade-up" data-aos-delay="<?php echo ($i + 2) * 100; ?>">
+                    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
+                        <div style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
+                            <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                        </div>
+                        <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;"><?php echo esc_html($f['title']); ?></h3>
+                        <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;"><?php echo esc_html($f['desc']); ?></p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Ready to Build CTA Banner -->
+    <div style="background:linear-gradient(135deg,#2563eb 0%,#1C2539 100%);padding:80px 0;margin-top:0;">
+        <div class="container">
+            <div style="text-align:center;max-width:720px;margin:0 auto;">
+                <h2 class="heading text-50" data-aos="fade-up" style="color:#fff;margin-bottom:20px;">
+                    <?php esc_html_e('Ready to Build an Authority Backlink Profile?', 'digitalgrowth'); ?>
+                </h2>
+                <p class="text text-18" data-aos="fade-up" data-aos-delay="50" style="color:rgba(255,255,255,.8);margin-bottom:40px;line-height:1.8;">
+                    <?php esc_html_e('Every day without quality backlinks is a day your competitors are pulling further ahead. Start building your site\'s authority today with genuine, high-quality placements that deliver lasting SEO results.', 'digitalgrowth'); ?>
+                </p>
+                <div class="buttons" data-aos="fade-up" data-aos-delay="100" style="justify-content:center;flex-wrap:wrap;gap:16px;">
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+                        class="button button--primary"
+                        aria-label="<?php esc_attr_e('View Backlink Plans', 'digitalgrowth'); ?>"
+                        style="background:#fff;color:#1C2539;">
+                        <?php esc_html_e('View Backlink Plans', 'digitalgrowth'); ?>
                         <span class="svg-wrapper">
-                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
-                                    fill="CurrentColor" />
+                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z" fill="CurrentColor"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+                        class="button"
+                        aria-label="<?php esc_attr_e('Book a Free Consultation', 'digitalgrowth'); ?>"
+                        style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);">
+                        <?php esc_html_e('Book a Free Consultation', 'digitalgrowth'); ?>
+                        <span class="svg-wrapper">
+                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z" fill="CurrentColor"/>
                             </svg>
                         </span>
                     </a>
@@ -405,7 +475,7 @@ get_header();
                             <?php esc_html_e('Frequently Asked Questions', 'digitalgrowth'); ?>
                         </h2>
                         <div class="text text-18" data-aos="fade-up" data-aos-delay="80">
-                            <?php esc_html_e('Everything you need to know about our competitor analysis services — answered clearly and honestly.', 'digitalgrowth'); ?>
+                            <?php esc_html_e('Everything you need to know about our high-authority backlink service — answered clearly and honestly.', 'digitalgrowth'); ?>
                         </div>
                         <div class="buttons" data-aos="fade-up" data-aos-delay="100">
                             <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
@@ -434,56 +504,64 @@ get_header();
                             <?php
                             $faqs = array(
                                 array(
-                                    'q' => 'How long does it take to receive my reports?',
-                                    'a' => 'Reports are typically delivered within 5–7 business days, depending on the package size. You\'ll receive them in a clean, easy-to-read PDF format.'
+                                    'q' => 'How long does it take to get my backlink live?',
+                                    'a' => 'Most placements go live within 10–15 business days. Premium placements may take slightly longer due to the higher vetting standards involved.'
                                 ),
                                 array(
-                                    'q' => 'How do you choose which competitors to analyse?',
-                                    'a' => 'You can either provide a list of your top competitors or we can identify them for you based on who\'s currently ranking for your target keywords. Either way works.'
+                                    'q' => 'Can I order multiple backlinks at once?',
+                                    'a' => 'Yes, and we recommend it. A natural backlink profile is built gradually over time. Many clients order a mix of Growth and Premium links each month as part of their ongoing SEO strategy.'
                                 ),
                                 array(
-                                    'q' => 'Do I need any SEO knowledge to understand the reports?',
-                                    'a' => 'No. Reports are written in plain language with clear explanations and actionable recommendations — no technical background needed.'
+                                    'q' => 'Will these backlinks be permanent?',
+                                    'a' => 'Yes. All placements are permanent editorial links — not rented or time-limited. If a link ever goes down within 90 days of delivery, we replace it at no extra cost.'
                                 ),
                                 array(
-                                    'q' => 'Can I use these reports to brief my own SEO team or developer?',
-                                    'a' => 'Absolutely. The reports are structured to be shared directly with your team, agency, or freelancer to implement the findings.'
+                                    'q' => 'Do you guarantee placement on a specific website?',
+                                    'a' => 'We don\'t guarantee specific domains, as placements depend on publisher availability and editorial approval. However, we guarantee the DR, traffic range, and niche relevance as listed in your chosen plan.'
                                 ),
                                 array(
-                                    'q' => 'What if I need more than 15 competitor reports?',
-                                    'a' => 'Get in touch, and we\'ll put together a custom package that fits your needs.'
+                                    'q' => 'Are these safe for Google?',
+                                    'a' => 'Absolutely. All links are editorially placed on real websites with organic traffic. They follow Google\'s guidelines for natural link building and pose no penalty risk.'
+                                ),
+                                array(
+                                    'q' => 'What information do I need to provide?',
+                                    'a' => 'Just your target URL (the page you want the link to point to), your preferred anchor text, and a brief description of your business or niche. That\'s it — we handle everything else.'
+                                ),
+                                array(
+                                    'q' => 'Do you offer custom packages for agencies or bulk orders?',
+                                    'a' => 'Yes. If you need 5, 10, or 20+ backlinks per month, get in touch and we\'ll create a custom plan with preferential pricing.'
                                 ),
                             );
                             $delay = 0;
                             foreach ($faqs as $faq):
                                 ?>
-                                    <div class="accordion-block" data-aos="fade-up" <?php echo $delay ? ' data-aos-delay="' . $delay . '"' : ''; ?>>
-                                        <div class="accordion-opener heading text-22">
-                                            <?php echo esc_html($faq['q']); ?>
-                                            <div class="svg-wrapper">
-                                                <svg class="icon icon-24" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_9088_8345)">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M12.7083 15.7044C12.5208 15.8919 12.2665 15.9972 12.0013 15.9972C11.7362 15.9972 11.4818 15.8919 11.2943 15.7044L5.63732 10.0474C5.54181 9.95517 5.46563 9.84482 5.41322 9.72282C5.36081 9.60081 5.33322 9.46959 5.33207 9.33681C5.33092 9.20404 5.35622 9.07236 5.4065 8.94946C5.45678 8.82656 5.53103 8.71491 5.62492 8.62102C5.71882 8.52713 5.83047 8.45287 5.95337 8.40259C6.07626 8.35231 6.20794 8.32701 6.34072 8.32816C6.4735 8.32932 6.60472 8.3569 6.72672 8.40931C6.84873 8.46172 6.95907 8.5379 7.05132 8.63341L12.0013 13.5834L16.9513 8.63341C17.1399 8.45125 17.3925 8.35046 17.6547 8.35274C17.9169 8.35502 18.1677 8.46019 18.3531 8.64559C18.5385 8.831 18.6437 9.08182 18.646 9.34401C18.6483 9.60621 18.5475 9.85881 18.3653 10.0474L12.7083 15.7044Z"
-                                                            fill="CurrentColor" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath>
-                                                            <rect width="24" height="24" fill="CurrentColor" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-content">
-                                            <div class="accordion-content-inner text text-18">
-                                                <?php echo esc_html($faq['a']); ?>
-                                            </div>
+                                <div class="accordion-block" data-aos="fade-up" <?php echo $delay ? ' data-aos-delay="' . $delay . '"' : ''; ?>>
+                                    <div class="accordion-opener heading text-22">
+                                        <?php echo esc_html($faq['q']); ?>
+                                        <div class="svg-wrapper">
+                                            <svg class="icon icon-24" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_9088_8345)">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12.7083 15.7044C12.5208 15.8919 12.2665 15.9972 12.0013 15.9972C11.7362 15.9972 11.4818 15.8919 11.2943 15.7044L5.63732 10.0474C5.54181 9.95517 5.46563 9.84482 5.41322 9.72282C5.36081 9.60081 5.33322 9.46959 5.33207 9.33681C5.33092 9.20404 5.35622 9.07236 5.4065 8.94946C5.45678 8.82656 5.53103 8.71491 5.62492 8.62102C5.71882 8.52713 5.83047 8.45287 5.95337 8.40259C6.07626 8.35231 6.20794 8.32701 6.34072 8.32816C6.4735 8.32932 6.60472 8.3569 6.72672 8.40931C6.84873 8.46172 6.95907 8.5379 7.05132 8.63341L12.0013 13.5834L16.9513 8.63341C17.1399 8.45125 17.3925 8.35046 17.6547 8.35274C17.9169 8.35502 18.1677 8.46019 18.3531 8.64559C18.5385 8.831 18.6437 9.08182 18.646 9.34401C18.6483 9.60621 18.5475 9.85881 18.3653 10.0474L12.7083 15.7044Z"
+                                                        fill="CurrentColor" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="24" height="24" fill="CurrentColor" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
                                         </div>
                                     </div>
-                                    <?php
-                                    $delay += 50;
+                                    <div class="accordion-content">
+                                        <div class="accordion-content-inner text text-18">
+                                            <?php echo esc_html($faq['a']); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                $delay += 50;
                             endforeach;
                             ?>
                     </faq-accordion>
@@ -491,8 +569,6 @@ get_header();
             </div>
         </div>
     </div>
-    </div>
-
 
 </main>
 
