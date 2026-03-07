@@ -55,8 +55,7 @@ iframe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%;
-  aspect-ratio: attr(width)/attr(height); }
+  max-width: 100%; }
 
 svg {
   display: -webkit-box;
@@ -6106,9 +6105,34 @@ blockquote:before {
   -webkit-margin-before: 40px;
   margin-block-start: 40px; }
 
+/* Force vertical stacking — prevent any inherited flex from lining items side by side */
+ul.comments-area,
+ul.comments-area .children {
+  display: block;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+ul.comments-area .children {
+  margin-block-start: 40px; }
+
+ul.comments-area li.comments-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  gap: 24px; }
+
 .replied-item {
   -webkit-padding-start: calc(var(--image-size) - 10px);
   padding-inline-start: calc(var(--image-size) - 10px); }
+
 
 .comments-form-headings {
   -webkit-margin-after: 30px;

@@ -325,19 +325,19 @@ add_filter('body_class', 'digitalgrowth_body_classes');
 
 // -------------------------------------------------------
 // Custom comment callback — Consulo template style
-// Renders each comment as: comments-item > commentator-img + comment-details
+// NOTE: Walker_Comment opens AND closes the <li> itself.
+// This callback only outputs the inner content.
 // -------------------------------------------------------
 function digitalgrowth_comment($comment, $args, $depth)
 {
 	$reply_svg = '<svg viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16927 13.6615L0.835938 6.99479L9.16927 0.328125V4.49479C13.7716 4.49479 17.5026 8.22579 17.5026 12.8281C17.5026 13.0555 17.4935 13.2809 17.4756 13.5037C16.2197 11.12 13.7176 9.49479 10.8359 9.49479H9.16927V13.6615Z" fill="currentColor"/></svg>';
-
 	$replied_class = $depth > 1 ? ' replied-item' : '';
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class('comments-item' . $replied_class, $comment); ?>
 		data-aos="fade-up">
 
 		<div class="commentator-img">
-			<?php echo get_avatar($comment, 110, '', get_comment_author($comment), array('loading' => 'lazy', 'class' => '')); ?>
+			<?php echo get_avatar($comment, 110, '', get_comment_author($comment), array('loading' => 'lazy')); ?>
 		</div>
 
 		<div class="comment-details">
@@ -353,14 +353,12 @@ function digitalgrowth_comment($comment, $args, $depth)
 
 				<?php if (comments_open() && $depth < $args['max_depth']): ?>
 					<div class="button-reply text text-16 fw-500">
-						<?php
-						comment_reply_link(array_merge($args, array(
+						<?php comment_reply_link(array_merge($args, array(
 							'depth' => $depth,
 							'max_depth' => $args['max_depth'],
 							'before' => $reply_svg,
 							'reply_text' => esc_html__('Reply', 'digitalgrowth'),
-						)));
-						?>
+						))); ?>
 					</div>
 				<?php endif; ?>
 			</div>
@@ -375,7 +373,6 @@ function digitalgrowth_comment($comment, $args, $depth)
 				<?php comment_text(); ?>
 			</p>
 		</div>
-	</li>
-	<?php
+		<?php
+	// NOTE: closing </li> is intentionally omitted — WordPress walker adds it automatically.
 }
-
