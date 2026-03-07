@@ -125,15 +125,53 @@ get_header();
         </div>
 
         <!-- Pagination -->
-        <div class="buttons buttons-discover" data-aos="fade-up" data-aos-delay="100">
-          <?php
-          the_posts_pagination(array(
-            'mid_size' => 2,
-            'prev_text' => esc_html__('← Prev', 'digitalgrowth'),
-            'next_text' => esc_html__('Next →', 'digitalgrowth'),
-          ));
-          ?>
-        </div>
+        <?php
+        $total_pages = $GLOBALS['wp_query']->max_num_pages;
+        if ( $total_pages > 1 ) :
+          $current_page = max( 1, get_query_var( 'paged' ) );
+          $prev_page    = $current_page > 1 ? $current_page - 1 : null;
+          $next_page    = $current_page < $total_pages ? $current_page + 1 : null;
+        ?>
+        <nav class="pagination" data-aos="fade-up" aria-label="<?php esc_attr_e( 'Blog pagination', 'digitalgrowth' ); ?>">
+          <ul class="list-unstyled pagintaion-list">
+
+            <?php if ( $prev_page ) : ?>
+            <li>
+              <a href="<?php echo esc_url( get_pagenum_link( $prev_page ) ); ?>"
+                class="pagination-link" aria-label="<?php esc_attr_e( 'Previous page', 'digitalgrowth' ); ?>">
+                <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.910711 5.40903C0.754485 5.5653 0.666722 5.77723 0.666722 5.9982C0.666722 6.21917 0.754485 6.43109 0.910711 6.58736L5.62488 11.3015C5.70175 11.3811 5.7937 11.4446 5.89537 11.4883C5.99704 11.532 6.10639 11.5549 6.21704 11.5559C6.32769 11.5569 6.43742 11.5358 6.53984 11.4939C6.64225 11.452 6.7353 11.3901 6.81354 11.3119C6.89178 11.2336 6.95366 11.1406 6.99556 11.0382C7.03746 10.9357 7.05855 10.826 7.05759 10.7154C7.05662 10.6047 7.03364 10.4954 6.98996 10.3937C6.94629 10.292 6.8828 10.2001 6.80321 10.1232L2.67821 5.9982L6.80321 1.8732C6.95501 1.71603 7.039 1.50553 7.03711 1.28703C7.03521 1.06853 6.94757 0.859522 6.79306 0.705015C6.63855 0.550508 6.42954 0.462868 6.21104 0.460969C5.99255 0.45907 5.78205 0.543066 5.62488 0.694864L0.910711 5.40903Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php for ( $i = 1; $i <= $total_pages; $i++ ) : ?>
+            <li>
+              <a href="<?php echo esc_url( get_pagenum_link( $i ) ); ?>"
+                class="pagination-link<?php echo $i === $current_page ? ' active' : ''; ?>"
+                aria-label="<?php printf( esc_attr__( 'Page %d', 'digitalgrowth' ), $i ); ?>"
+                <?php echo $i === $current_page ? 'aria-current="page"' : ''; ?>>
+                <?php echo $i; ?>
+              </a>
+            </li>
+            <?php endfor; ?>
+
+            <?php if ( $next_page ) : ?>
+            <li>
+              <a href="<?php echo esc_url( get_pagenum_link( $next_page ) ); ?>"
+                class="pagination-link" aria-label="<?php esc_attr_e( 'Next page', 'digitalgrowth' ); ?>">
+                <svg viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08929 5.40903C7.24552 5.5653 7.33328 5.77723 7.33328 5.9982C7.33328 6.21917 7.24552 6.43109 7.08929 6.58736L2.37512 11.3015C2.29825 11.3811 2.2063 11.4446 2.10463 11.4883C2.00296 11.532 1.89361 11.5549 1.78296 11.5559C1.67231 11.5569 1.56258 11.5358 1.46016 11.4939C1.35775 11.452 1.2647 11.3901 1.18646 11.3119C1.10822 11.2336 1.04634 11.1406 1.00444 11.0382C0.962537 10.9357 0.941453 10.826 0.942414 10.7154C0.943376 10.6047 0.966364 10.4954 1.01004 10.3937C1.05371 10.292 1.11720 10.2001 1.19679 10.1232L5.32179 5.9982L1.19679 1.8732C1.04499 1.71603 0.960996 1.50553 0.962894 1.28703C0.964793 1.06853 1.05243 0.859522 1.20694 0.705015C1.36145 0.550508 1.57046 0.462868 1.78896 0.460969C2.00745 0.45907 2.21795 0.543066 2.37512 0.694864L7.08929 5.40903Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+            <?php endif; ?>
+
+          </ul>
+        </nav>
+        <?php endif; ?>
+
 
       <?php else: ?>
         <p class="text text-18" style="text-align:center;padding:80px 0;">
