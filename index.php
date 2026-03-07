@@ -17,35 +17,7 @@ get_header();
 
       <!-- Section heading -->
       <div class="section-headings" data-aos="fade-up">
-        <div class="subheading text-20 subheading-bg">
-          <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <g clip-path="url(#clip-bidx1)">
-              <path
-                d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 0 8.0588 0 7C0 5.9412 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                fill="CurrentColor" />
-            </g>
-            <defs>
-              <clipPath id="clip-bidx1">
-                <rect width="14" height="14" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <span><?php esc_html_e('Our Blog', 'digitalgrowth'); ?></span>
-          <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-            fill="none">
-            <g clip-path="url(#clip-bidx2)">
-              <path
-                d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 0 8.0588 0 7C0 5.9412 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                fill="CurrentColor" />
-            </g>
-            <defs>
-              <clipPath id="clip-bidx2">
-                <rect width="14" height="14" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
+
         <h1 class="heading text-50" data-aos="fade-up" data-aos-delay="50">
           <?php esc_html_e('Latest from Our Blog', 'digitalgrowth'); ?>
         </h1>

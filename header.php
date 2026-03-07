@@ -13,9 +13,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="view-transition" content="same-origin">
   <meta name="theme-color" content="Red">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="profile" href="https://gmpg.org/xfn/11">
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/imgs/favicon.png"
-    type="image/x-icon">
+
+  <?php
+  // Basic Open Graph details to generate rich previews on WhatsApp / Social Media
+  $og_title = get_bloginfo('name') . ' | ' . get_bloginfo('description');
+  $og_url = home_url(add_query_arg(array(), $wp->request));
+  $og_description = get_bloginfo('description');
+  $og_type = 'website';
+
+  // The default Open Graph image (Facebook/WhatsApp require minimum 200x200px)
+  $og_image = get_template_directory_uri() . '/assets/imgs/logo-white-share.jpg';
+
+  // Override if viewing a specific post/page
+  if (is_singular()) {
+    $og_title = get_the_title() . ' | ' . get_bloginfo('name');
+    $og_url = get_permalink();
+    $og_type = 'article';
+
+    if (has_excerpt()) {
+      $og_description = wp_strip_all_tags(get_the_excerpt());
+    } else {
+      $content = get_post_field('post_content', get_the_ID());
+      $og_description = wp_trim_words(wp_strip_all_tags($content), 40, '...');
+    }
+
+    if (has_post_thumbnail()) {
+      // Use 'large' to ensure it's big enough for the 1200x630 standard
+      $og_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+    }
+  }
+  ?>
+  <meta property="og:title" content="<?php echo esc_attr($og_title); ?>">
+  <meta property="og:description" content="<?php echo esc_attr($og_description); ?>">
+  <meta property="og:url" content="<?php echo esc_url($og_url); ?>">
+  <meta property="og:image" content="<?php echo esc_url($og_image); ?>">
+  <meta property="og:type" content="<?php echo esc_attr($og_type); ?>">
+  <meta property="og:image:width" content="200" />
+  <meta property="og:image:height" content="200" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?php echo esc_attr($og_title); ?>">
+  <meta name="twitter:description" content="<?php echo esc_attr($og_description); ?>">
+  <meta name="twitter:image" content="<?php echo esc_url($og_image); ?>">
+  <meta property="twitter:image:width" content="200" />
+  <meta property="twitter:image:height" content="200" />
+
   <?php wp_head(); ?>
 </head>
 
@@ -78,151 +123,7 @@
 
               <!-- Mobile drawer extra content -->
               <div class="drawer-content d-lg-none">
-                <div class="drawer-block">
-                  <div class="drawer-heading text text-18"><?php esc_html_e('Our Services', 'digitalgrowth'); ?></div>
-                  <?php
-                  wp_nav_menu(array(
-                    'theme_location' => 'services',
-                    'menu_class' => 'drawer-additional-menu list-unstyled flex-direction-column',
-                    'container' => false,
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth' => 1,
-                    'walker' => new DigitalGrowth_Walker_Nav_Menu(),
-                  ));
-                  ?>
-                  <li class="nav-item nav-item-static">
-                    <a class="menu-link menu-link-main menu-accrodion" href="services.html">
-                      Services
-                      <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L0 0H10L5 5Z" fill="currentColor" />
-                      </svg>
-                    </a>
-                    <div class="header-megamenu header-submenu menu-absolute submenu-color">
-                      <ul class="list-unstyled">
-                        <li class="nav-item">
-                          <a class="menu-link heading fw-300" href="blog.html">
-                            WHY CONSULO
-                          </a>
-                          <ul class="reset-submenu list-unstyled submenu-color">
-                            <li class="nav-item">
-                              <a class="menu-link" href="services.html">
-                                <div class="heading text-20">
-                                  Become a Partner
-                                </div>
-                                <div class="text text-14">
-                                  Links customers with trusted Partners who help
-                                  them realize greater value—faster—through
-                                  Consulo.
-                                </div>
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="menu-link" href="project.html">
-                                <div class="heading text-20">
-                                  Case Studies
-                                </div>
-                                <div class="text text-14">
-                                  Hundreds of emerging brands thrive with
-                                  Consulo. Discover their journeys.
-                                </div>
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="menu-link" href="project-details.html">
-                                <div class="heading text-20">
-                                  Product Development
-                                </div>
-                                <div class="text text-14">
-                                  Speed up innovation to enable quicker,
-                                  effective team-driven product launches.
-                                </div>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="menu-link heading fw-300" href="project.html">
-                            FEATURED CASE STUDY
-                          </a>
-                          <ul class="reset-submenu list-unstyled submenu-color">
-                            <li class="nav-item">
-                              <a class="menu-link megamenu-image-wrap" href="project-details.html">
-                                <picture>
-                                  <source media="(max-width: 575px)" srcset="assets/img/menu/575.jpg">
-                                  <img src="assets/img/menu/1.jpg" width="1000" height="668" loading="lazy"
-                                    alt="Hero Image">
-                                </picture>
-                                <div class="content">
-                                  <div class="heading text-20">
-                                    <div class="heading text-20">
-                                      Consulo Subscriptions
-                                    </div>
-                                    <div class="text text-14">
-                                      Hundreds of emerging brands thrive with
-                                      Consulo. Discover their journeys.
-                                    </div>
-                                  </div>
-                                  <div class="button button--primary">
-                                    <span class="svg-wrapper">
-                                      <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                          d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
-                                          fill="currentColor"></path>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                </div>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="nav-item megamenu-links">
-                          <a class="menu-link text-14 fw-300" href="contact.html">
-                            <svg class="icon-18" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                              <path opacity="0.5" d="M8 10.5H16" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                              <path opacity="0.5" d="M8 14H13.5" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" />
-                            </svg>
-                            Contact Sales
-                          </a>
-                          <a class="menu-link text-14 fw-300" href="project-details.html">
-                            <svg class="icon-18" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
-                              <path
-                                d="M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                            </svg>
-                            Watch Demo
-                          </a>
-                          <a class="menu-link text-14 fw-300" href="team.html">
-                            <svg class="icon-18" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="9" cy="9" r="2" stroke="currentColor" stroke-width="1.5" />
-                              <path
-                                d="M13 15C13 16.1046 13 17 9 17C5 17 5 16.1046 5 15C5 13.8954 6.79086 13 9 13C11.2091 13 13 13.8954 13 15Z"
-                                stroke="currentColor" stroke-width="1.5" />
-                              <path
-                                d="M22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C21.298 5.64118 21.5794 6.2255 21.748 7"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                              <path d="M19 12H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                              <path d="M19 9H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                              <path d="M19 15H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                            Webinars
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  </ul>
-                </div>
+
                 <div class="drawer-block drawer-block-contact">
                   <div class="drawer-heading text text-18"><?php esc_html_e('Quick Contact', 'digitalgrowth'); ?>
                   </div>
@@ -317,19 +218,7 @@
       </drawer-opener>
     </div>
     <div class="drawer-content">
-      <div class="drawer-block">
-        <div class="drawer-heading text text-18"><?php esc_html_e('Our Services', 'digitalgrowth'); ?></div>
-        <?php
-        wp_nav_menu(array(
-          'theme_location' => 'services',
-          'menu_class' => 'drawer-additional-menu list-unstyled flex-direction-column',
-          'container' => false,
-          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-          'depth' => 1,
-          'walker' => new DigitalGrowth_Walker_Nav_Menu(),
-        ));
-        ?>
-      </div>
+
       <div class="drawer-block drawer-block-contact">
         <div class="drawer-heading text text-18"><?php esc_html_e('Quick Contact', 'digitalgrowth'); ?></div>
         <ul class="drawer-additional-menu list-unstyled flex-direction-column">
