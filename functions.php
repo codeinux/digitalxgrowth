@@ -1,0 +1,325 @@
+<?php
+/**
+ * Digital Growth Theme functions and definitions
+ *
+ * @package digitalgrowth
+ */
+
+// -------------------------------------------------------
+// Custom Nav Menu Walker — outputs nav-item + menu-link classes
+// -------------------------------------------------------
+class DigitalGrowth_Walker_Nav_Menu extends Walker_Nav_Menu
+{
+
+	/**
+	 * Open a submenu wrapper — wraps <ul> inside the themed dropdown container.
+	 */
+	public function start_lvl(&$output, $depth = 0, $args = null)
+	{
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n{$indent}<div class=\"menu-absolute header-submenu submenu-color\">\n";
+		$output .= "{$indent}\t<ul class=\"list-unstyled\">\n";
+	}
+
+	/**
+	 * Close the submenu wrapper.
+	 */
+	public function end_lvl(&$output, $depth = 0, $args = null)
+	{
+		$indent = str_repeat("\t", $depth);
+		$output .= "{$indent}\t</ul>\n";
+		$output .= "{$indent}</div>\n";
+	}
+
+	public function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0)
+	{
+		$item = $data_object;
+		$indent = ($depth) ? str_repeat("\t", $depth) : '';
+
+		// Build CSS classes for <li>
+		$classes = empty($item->classes) ? array() : (array) $item->classes;
+		$classes[] = 'nav-item';
+		$has_children = in_array('menu-item-has-children', $classes, true);
+		$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+		$class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+
+		$id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
+		$id = $id ? ' id="' . esc_attr($id) . '"' : '';
+
+		$output .= $indent . '<li' . $id . $class_names . '>';
+
+		// Build the link
+		$atts = array();
+		$atts['title'] = !empty($item->attr_title) ? $item->attr_title : '';
+		$atts['target'] = !empty($item->target) ? $item->target : '';
+		$atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
+		$atts['href'] = !empty($item->url) ? $item->url : '';
+
+		// Add our custom link classes
+		$link_classes = 'menu-link';
+		if ($depth === 0) {
+			$link_classes .= ' menu-link-main';
+			if ($has_children) {
+				$link_classes .= ' menu-accrodion';
+			}
+		}
+		$atts['class'] = $link_classes;
+
+		$atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args, $depth);
+
+		$attributes = '';
+		foreach ($atts as $attr => $value) {
+			if (!empty($value)) {
+				$value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
+				$attributes .= ' ' . $attr . '="' . $value . '"';
+			}
+		}
+
+		$title = apply_filters('the_title', $item->title, $item->ID);
+		$title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
+
+		// Dropdown arrow SVG for top-level items with children
+		$dropdown_arrow = '';
+		if ($depth === 0 && $has_children) {
+			$dropdown_arrow = ' <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5L0 0H10L5 5Z" fill="currentColor" /></svg>';
+		}
+
+		$item_output = isset($args->before) ? $args->before : '';
+		$item_output .= '<a' . $attributes . '>';
+		$item_output .= (isset($args->link_before) ? $args->link_before : '') . $title . $dropdown_arrow . (isset($args->link_after) ? $args->link_after : '');
+		$item_output .= '</a>';
+		$item_output .= isset($args->after) ? $args->after : '';
+
+		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+	}
+}
+
+if (!defined('ABSPATH')) {
+	exit;
+}
+
+// -------------------------------------------------------
+// Theme Setup
+// -------------------------------------------------------
+function digitalgrowth_setup()
+{
+	// Make theme available for translation
+	load_theme_textdomain('digitalgrowth', get_template_directory() . '/languages');
+
+	// Add default posts and comments RSS feed links to head
+	add_theme_support('automatic-feed-links');
+
+	// Let WordPress manage the document title
+	add_theme_support('title-tag');
+
+	// Post thumbnails
+	add_theme_support('post-thumbnails');
+
+	// HTML5 support
+	add_theme_support('html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+		'style',
+		'script',
+	));
+
+	// Register navigation menus
+	register_nav_menus(array(
+		'primary' => esc_html__('Primary Menu', 'digitalgrowth'),
+		'services' => esc_html__('Services Menu', 'digitalgrowth'),
+		'footer' => esc_html__('Footer Menu', 'digitalgrowth'),
+	));
+
+	// Custom logo support
+	add_theme_support('custom-logo', array(
+		'height' => 32,
+		'width' => 189,
+		'flex-width' => true,
+		'flex-height' => true,
+	));
+}
+add_action('after_setup_theme', 'digitalgrowth_setup');
+
+
+// -------------------------------------------------------
+// Enqueue Scripts & Styles
+// -------------------------------------------------------
+function digitalgrowth_scripts()
+{
+	// Google Fonts
+	wp_enqueue_style(
+		'digitalgrowth-google-fonts',
+		'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+		array(),
+		null
+	);
+
+	// Vendor CSS (Bootstrap, Swiper, AOS, etc.)
+	wp_enqueue_style(
+		'digitalgrowth-vendor',
+		get_template_directory_uri() . '/assets/css/vendor.css',
+		array(),
+		'1.0.0'
+	);
+
+	// Main Theme CSS
+	wp_enqueue_style(
+		'digitalgrowth-style',
+		get_stylesheet_uri(),
+		array('digitalgrowth-vendor'),
+		'1.0.0'
+	);
+
+	// Template CSS (the original style.css from HTML template)
+	wp_enqueue_style(
+		'digitalgrowth-main-css',
+		get_template_directory_uri() . '/assets/css/style.css',
+		array('digitalgrowth-style'),
+		'1.0.0'
+	);
+
+	// Vendor JS (jQuery, Swiper, AOS, etc.)
+	wp_enqueue_script(
+		'digitalgrowth-vendor',
+		get_template_directory_uri() . '/assets/js/vendor.js',
+		array(),
+		'1.0.0',
+		true
+	);
+
+	// Main JS
+	wp_enqueue_script(
+		'digitalgrowth-main',
+		get_template_directory_uri() . '/assets/js/main.js',
+		array('digitalgrowth-vendor'),
+		'1.0.0',
+		true
+	);
+
+	// Localise AJAX URL for contact form
+	wp_localize_script('digitalgrowth-main', 'digitalgrowth_ajax', array(
+		'ajax_url' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('digitalgrowth_contact_nonce'),
+	));
+
+	// Comment reply script
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
+	}
+}
+add_action('wp_enqueue_scripts', 'digitalgrowth_scripts');
+
+
+// -------------------------------------------------------
+// Widget Areas / Sidebars
+// -------------------------------------------------------
+function digitalgrowth_widgets_init()
+{
+	register_sidebar(array(
+		'name' => esc_html__('Sidebar', 'digitalgrowth'),
+		'id' => 'sidebar-1',
+		'description' => esc_html__('Add widgets here.', 'digitalgrowth'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-title heading text-22">',
+		'after_title' => '</h2>',
+	));
+
+	register_sidebar(array(
+		'name' => esc_html__('Footer Widget Area', 'digitalgrowth'),
+		'id' => 'footer-1',
+		'description' => esc_html__('Footer widget area.', 'digitalgrowth'),
+		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-heading heading text-22">',
+		'after_title' => '</div>',
+	));
+}
+add_action('widgets_init', 'digitalgrowth_widgets_init');
+
+
+// -------------------------------------------------------
+// Contact Form AJAX Handler
+// -------------------------------------------------------
+function digitalgrowth_handle_contact()
+{
+	// Verify nonce
+	if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'digitalgrowth_contact_nonce')) {
+		wp_send_json_error(array('message' => __('Security check failed.', 'digitalgrowth')));
+	}
+
+	$name = sanitize_text_field($_POST['name'] ?? '');
+	$email = sanitize_email($_POST['email'] ?? '');
+	$phone = sanitize_text_field($_POST['phone'] ?? '');
+	$service = sanitize_text_field($_POST['service'] ?? '');
+	$message = sanitize_textarea_field($_POST['message'] ?? '');
+
+	if (empty($name) || empty($email) || empty($message)) {
+		wp_send_json_error(array('message' => __('Please fill in all required fields.', 'digitalgrowth')));
+	}
+
+	if (!is_email($email)) {
+		wp_send_json_error(array('message' => __('Please enter a valid email address.', 'digitalgrowth')));
+	}
+
+	$to = get_option('admin_email');
+	$subject = sprintf(__('New Enquiry from %s - Digital Growth', 'digitalgrowth'), $name);
+	$body = sprintf(
+		"Name: %s\nEmail: %s\nPhone: %s\nService: %s\n\nMessage:\n%s",
+		$name,
+		$email,
+		$phone,
+		$service,
+		$message
+	);
+	$headers = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		'Reply-To: ' . $name . ' <' . $email . '>',
+	);
+
+	$sent = wp_mail($to, $subject, $body, $headers);
+
+	if ($sent) {
+		wp_send_json_success(array('message' => __('Thank you! Your message has been sent.', 'digitalgrowth')));
+	} else {
+		wp_send_json_error(array('message' => __('Failed to send message. Please try again.', 'digitalgrowth')));
+	}
+}
+add_action('wp_ajax_digitalgrowth_contact', 'digitalgrowth_handle_contact');
+add_action('wp_ajax_nopriv_digitalgrowth_contact', 'digitalgrowth_handle_contact');
+
+
+// -------------------------------------------------------
+// Custom excerpt length
+// -------------------------------------------------------
+function digitalgrowth_excerpt_length($length)
+{
+	return 25;
+}
+add_filter('excerpt_length', 'digitalgrowth_excerpt_length', 999);
+
+
+// -------------------------------------------------------
+// Add current-year shortcode helper (used in footer)
+// -------------------------------------------------------
+function digitalgrowth_current_year()
+{
+	return date('Y');
+}
+
+
+// -------------------------------------------------------
+// Custom body class
+// -------------------------------------------------------
+function digitalgrowth_body_classes($classes)
+{
+	if (is_singular() && !is_front_page()) {
+		$classes[] = 'singular';
+	}
+	return $classes;
+}
+add_filter('body_class', 'digitalgrowth_body_classes');
+
