@@ -33,7 +33,7 @@ get_header();
                                 </defs>
                             </svg>
                             <span>
-                                <?php esc_html_e('Expert Seo', 'digitalgrowth'); ?>
+                                <?php esc_html_e('Contact', 'digitalgrowth'); ?>
                             </span>
                             <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                 viewBox="0 0 14 14" fill="none">
@@ -75,7 +75,7 @@ get_header();
                                     </svg>
                                 </span>
                             </a>
-                            <a href="tel:<?php echo esc_attr(get_theme_mod('phone_number', '(307)555-0133')); ?>"
+                            <a href="tel:<?php echo esc_attr(get_theme_mod('phone_number', '+919110221774')); ?>"
                                 class="hero-phone-call" aria-label="Phone number" data-aos="fade-up"
                                 data-aos-delay="50">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
@@ -90,7 +90,7 @@ get_header();
                                         <?php esc_html_e('Need help?', 'digitalgrowth'); ?>
                                     </div>
                                     <div class="text text-16">
-                                        <?php echo esc_html(get_theme_mod('phone_number', '(307) 555-0133')); ?>
+                                        <?php echo esc_html(get_theme_mod('phone_number', '+91 9110221774')); ?>
                                     </div>
                                 </div>
                             </a>

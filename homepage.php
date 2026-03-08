@@ -72,7 +72,7 @@ get_header();
                   </svg>
                 </span>
               </a>
-              <a href="tel:<?php echo esc_attr(get_theme_mod('phone_number', '(307)555-0133')); ?>"
+              <a href="tel:<?php echo esc_attr(get_theme_mod('phone_number', '+919110221774')); ?>"
                 class="hero-phone-call" aria-label="Phone number" data-aos="fade-up" data-aos-delay="50">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                   <path
@@ -81,7 +81,7 @@ get_header();
                 </svg>
                 <div class="hero-call">
                   <div class="text text-14"><?php esc_html_e('Need help?', 'digitalgrowth'); ?></div>
-                  <div class="text text-16"><?php echo esc_html(get_theme_mod('phone_number', '(307) 555-0133')); ?>
+                  <div class="text text-16"><?php echo esc_html(get_theme_mod('phone_number', '+91 9110221774')); ?>
                   </div>
                 </div>
               </a>
@@ -389,29 +389,6 @@ get_header();
                   </a>
                 </div>
 
-                <!-- Slide 4: Risk Management -->
-                <div class="swiper-slide">
-                  <a href="<?php echo esc_url(home_url('/service-details/')); ?>" class="card-service radius18"
-                    aria-label="Risk Management">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/service/s7.jpg"
-                      alt="Risk Management" width="1000" height="596" loading="lazy">
-                    <div class="card-service-content-absolute">
-                      <div class="card-service-content">
-                        <div class="card-working-process">
-                          <h2 class="heading text-24 fw-500"><?php esc_html_e('Risk Management', 'digitalgrowth'); ?>
-                          </h2>
-                          <div class="card-icon-text card-icon-text-horizontal">
-                            <div class="content">
-                              <p class="text text-16">
-                                <?php esc_html_e('Identifying, assessing, and mitigating risks to protect business growth and ensure stability.', 'digitalgrowth'); ?>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
 
               </div>
               <div class="swiper-pagination"></div>
@@ -714,7 +691,7 @@ get_header();
 
 
   <!-- Why Choose Us -->
-  <div class="why-choose-us mt-100 section-padding">
+  <div class="why-choose-us section-padding">
     <div class="container">
       <div class="choose-top">
         <div class="row">
@@ -1066,7 +1043,7 @@ get_header();
 
                 </ul>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=56')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1156,7 +1133,7 @@ get_header();
 
                 </ul>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=57')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">

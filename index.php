@@ -12,10 +12,8 @@ get_header();
 ?>
 
 <main>
-  <div class="featured-blog mt-100 section-padding">
+  <div class="featured-blog section-padding">
     <div class="container">
-
-      <!-- Section heading -->
       <div class="section-headings" data-aos="fade-up">
 
         <h1 class="heading text-50" data-aos="fade-up" data-aos-delay="50">

@@ -7026,7 +7026,9 @@ footer .social-link:hover {
   --color-background: rgba(28, 37, 57, 1);
   background: var(--color-background);
   padding: 20px 0; }
-
+.footer-bottom .text {
+    color: #fff;
+}
 .footer-contact {
   position: relative;
   -webkit-padding-before: 100px;
