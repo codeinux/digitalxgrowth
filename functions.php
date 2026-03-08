@@ -406,4 +406,37 @@ function digitalgrowth_skip_cart_redirect_checkout()
 // -------------------------------------------------------
 add_filter('wc_add_to_cart_message_html', '__return_false');
 
+// -------------------------------------------------------
+// Security: Remove WP Version Number from Generator tag & Styles/Scripts
+// -------------------------------------------------------
+add_filter('the_generator', '__return_empty_string');
+function digitalgrowth_remove_version_scripts_styles($src)
+{
+	if (strpos($src, 'ver=')) {
+		$src = remove_query_arg('ver', $src);
+	}
+	return $src;
+}
+add_filter('style_loader_src', 'digitalgrowth_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'digitalgrowth_remove_version_scripts_styles', 9999);
 
+// -------------------------------------------------------
+// Security: Disable XML-RPC (Prevents DDoS and Brute Force Attacks)
+// -------------------------------------------------------
+add_filter('xmlrpc_enabled', '__return_false');
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+
+// -------------------------------------------------------
+// Security: Add Basic Security Headers to Frontend
+// -------------------------------------------------------
+function digitalgrowth_add_security_headers()
+{
+	if (!is_admin()) {
+		header("X-XSS-Protection: 1; mode=block");
+		header("X-Content-Type-Options: nosniff");
+		header("X-Frame-Options: SAMEORIGIN");
+		header("Referrer-Policy: strict-origin-when-cross-origin");
+	}
+}
+add_action('send_headers', 'digitalgrowth_add_security_headers');
