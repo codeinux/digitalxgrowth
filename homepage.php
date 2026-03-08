@@ -977,7 +977,7 @@ get_header();
 
                 </ul>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=55')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">

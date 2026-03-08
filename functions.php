@@ -126,6 +126,9 @@ function digitalgrowth_setup()
 		'script',
 	));
 
+	// WooCommerce Support (crucial for custom template overrides)
+	add_theme_support('woocommerce');
+
 	// Register navigation menus
 	register_nav_menus(array(
 		'primary' => esc_html__('Primary Menu', 'digitalgrowth'),
@@ -376,3 +379,31 @@ function digitalgrowth_comment($comment, $args, $depth)
 		<?php
 	// NOTE: closing </li> is intentionally omitted — WordPress walker adds it automatically.
 }
+
+// -------------------------------------------------------
+// WooCommerce: Single-item cart (clear before adding new)
+// -------------------------------------------------------
+add_filter('woocommerce_add_to_cart_validation', 'digitalgrowth_clear_cart_before_add', 10, 3);
+function digitalgrowth_clear_cart_before_add($passed, $product_id, $quantity)
+{
+	if (!WC()->cart->is_empty()) {
+		WC()->cart->empty_cart();
+	}
+	return $passed;
+}
+
+// -------------------------------------------------------
+// WooCommerce: Skip cart → go directly to Checkout
+// -------------------------------------------------------
+add_filter('woocommerce_add_to_cart_redirect', 'digitalgrowth_skip_cart_redirect_checkout');
+function digitalgrowth_skip_cart_redirect_checkout()
+{
+	return wc_get_checkout_url();
+}
+
+// -------------------------------------------------------
+// WooCommerce: Hide "Added to Cart" Message completely
+// -------------------------------------------------------
+add_filter('wc_add_to_cart_message_html', '__return_false');
+
+
