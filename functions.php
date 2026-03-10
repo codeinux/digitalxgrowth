@@ -327,7 +327,7 @@ function digitalgrowth_body_classes($classes)
 add_filter('body_class', 'digitalgrowth_body_classes');
 
 // -------------------------------------------------------
-// Custom comment callback — Consulo template style
+// Custom comment callback — Digital Growth framework style
 // NOTE: Walker_Comment opens AND closes the <li> itself.
 // This callback only outputs the inner content.
 // -------------------------------------------------------
@@ -440,3 +440,75 @@ function digitalgrowth_add_security_headers()
 	}
 }
 add_action('send_headers', 'digitalgrowth_add_security_headers');
+
+// -------------------------------------------------------
+// Performance: Remove Unused Block Library & Dashicons
+// -------------------------------------------------------
+function digitalgrowth_remove_unused_css()
+{
+	wp_dequeue_style('wp-block-library');
+	wp_dequeue_style('wp-block-library-theme');
+	wp_dequeue_style('wc-blocks-style'); // WooCommerce block CSS
+
+	// Remove Dashicons for non-logged-in users
+	if (!is_admin() && !is_user_logged_in()) {
+		wp_deregister_style('dashicons');
+	}
+}
+add_action('wp_enqueue_scripts', 'digitalgrowth_remove_unused_css', 100);
+
+// -------------------------------------------------------
+// Performance: Move jQuery to Footer
+// -------------------------------------------------------
+function digitalgrowth_move_jquery_to_footer()
+{
+	if (!is_admin()) {
+		wp_scripts()->add_data('jquery', 'group', 1);
+		wp_scripts()->add_data('jquery-core', 'group', 1);
+		wp_scripts()->add_data('jquery-migrate', 'group', 1);
+	}
+}
+add_action('wp_enqueue_scripts', 'digitalgrowth_move_jquery_to_footer');
+
+// -------------------------------------------------------
+// Performance: Disable WooCommerce Scripts & Styles on Non-Shop Pages
+// -------------------------------------------------------
+// completely disable WooCommerce default styles array on non-shop pages
+add_filter('woocommerce_enqueue_styles', function ($styles) {
+	if (function_exists('is_woocommerce') && !is_woocommerce() && !is_cart() && !is_checkout() && !is_account_page()) {
+		return array();
+	}
+	return $styles;
+});
+
+function digitalgrowth_manage_woocommerce_styles()
+{
+	if (function_exists('is_woocommerce')) {
+		// If not on Checkout, Cart, or Account page, strip WooCommerce overhead completely
+		if (!is_woocommerce() && !is_cart() && !is_checkout() && !is_account_page()) {
+			$styles = array(
+				'woocommerce-layout',
+				'woocommerce-smallscreen',
+				'woocommerce-general',
+				'woocommerce-inline',
+				'wc-blocks-vendors-style',
+				'wc-blocks-style',
+				'wc-blocks-packages-style'
+			);
+			foreach ($styles as $style) {
+				wp_dequeue_style($style);
+				wp_deregister_style($style);
+			}
+
+			wp_dequeue_script('wc-add-to-cart');
+			wp_dequeue_script('wc-cart-fragments');
+			wp_dequeue_script('woocommerce');
+			wp_dequeue_script('jquery-blockui');
+			wp_dequeue_script('jquery-placeholder');
+			wp_dequeue_script('wc-order-attribution');
+			wp_deregister_script('wc-order-attribution');
+			wp_dequeue_script('sourcebuster-js');
+		}
+	}
+}
+add_action('wp_enqueue_scripts', 'digitalgrowth_manage_woocommerce_styles', 9999);

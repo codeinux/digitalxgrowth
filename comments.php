@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying comments — Consulo template style.
+ * The template for displaying comments — Digital Growth framework style.
  *
  * @package digitalgrowth
  */
@@ -32,7 +32,7 @@ if (post_password_required()) {
 			</ul>
 
 			<?php
-			// Custom Consulo-style comments pagination
+			// Custom Digital Growth comments pagination
 			$total_pages = get_comment_pages_count();
 			if ($total_pages > 1):
 				$current_page = get_query_var('cpage') ? (int) get_query_var('cpage') : 1;
