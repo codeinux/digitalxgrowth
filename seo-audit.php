@@ -17,7 +17,7 @@ get_header();
           <div class="col-12 col-lg-6">
             <picture class="choose-media radius18" data-aos="fade-right">
               <source media="(max-width: 575px)"
-                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/575.jpg">
+                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg"
                 alt="<?php esc_attr_e('Why Choose Us', 'digitalgrowth'); ?>" width="1000" height="742" loading="lazy">
             </picture>

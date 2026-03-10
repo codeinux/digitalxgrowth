@@ -17,7 +17,7 @@ get_header();
                     <div class="col-12 col-lg-6">
                         <picture class="choose-media radius18" data-aos="fade-right">
                             <source media="(max-width: 575px)"
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/575.jpg">
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg">
                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg"
                                 alt="<?php esc_attr_e('High-Authority Backlink Services', 'digitalgrowth'); ?>"
                                 width="1000" height="742" loading="lazy">
@@ -314,20 +314,36 @@ get_header();
 
             <!-- Section heading -->
             <div class="section-headings text-center" style="margin-bottom:56px;">
-                <div class="subheading text-20 subheading-bg" data-aos="fade-up" style="justify-content:center;color:#fff;opacity:.75;">
-                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#a)"><path d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z" fill="currentColor"/></g>
-                        <defs><clipPath id="a"><rect width="14" height="14" fill="currentColor"/></clipPath></defs>
+                <div class="subheading text-20 subheading-bg" data-aos="fade-up"
+                    style="justify-content:center;color:#fff;opacity:.75;">
+                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                        viewBox="0 0 14 14" fill="none">
+                        <g clip-path="url(#a)">
+                            <path
+                                d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z"
+                                fill="currentColor" />
+                        </g>
+                        <defs>
+                            <clipPath id="a">
+                                <rect width="14" height="14" fill="currentColor" />
+                            </clipPath>
+                        </defs>
                     </svg>
                     <span style="color:#fff;"><?php esc_html_e('What Makes Us Different', 'digitalgrowth'); ?></span>
-                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#a)"><path d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z" fill="currentColor"/></g>
+                    <svg class="icon icon-14" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                        viewBox="0 0 14 14" fill="none">
+                        <g clip-path="url(#a)">
+                            <path
+                                d="M8.714 5.286C11.751 5.42 14 5.941 14 7s-2.249 1.58-5.286 1.714C8.58 11.751 8.059 14 7 14s-1.58-2.249-1.714-5.286C2.249 8.58 0 8.059 0 7s2.249-1.58 5.286-1.714C5.42 2.249 5.941 0 7 0s1.58 2.249 1.714 5.286Z"
+                                fill="currentColor" />
+                        </g>
                     </svg>
                 </div>
                 <h2 class="heading text-50" data-aos="fade-up" style="color:#fff;">
                     <?php esc_html_e('What Makes Our Backlinks Different', 'digitalgrowth'); ?>
                 </h2>
-                <p class="text text-18" data-aos="fade-up" style="color:rgba(255,255,255,.7);max-width:640px;margin:0 auto;">
+                <p class="text text-18" data-aos="fade-up"
+                    style="color:rgba(255,255,255,.7);max-width:640px;margin:0 auto;">
                     <?php esc_html_e('There are hundreds of link-building services out there — most selling low-quality placements that do nothing for your rankings. Here\'s what sets us apart.', 'digitalgrowth'); ?>
                 </p>
             </div>
@@ -338,27 +354,27 @@ get_header();
                 array(
                     'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
                     'title' => 'Hand-Vetted Publishers',
-                    'desc'  => 'Every website is manually reviewed for quality, relevance, and traffic before we approach them for a placement.',
+                    'desc' => 'Every website is manually reviewed for quality, relevance, and traffic before we approach them for a placement.',
                 ),
                 array(
                     'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
                     'title' => 'No Link Farms or PBNs',
-                    'desc'  => 'We only work with legitimate, independently owned websites. No private blog networks, no expired domain schemes.',
+                    'desc' => 'We only work with legitimate, independently owned websites. No private blog networks, no expired domain schemes.',
                 ),
                 array(
                     'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
                     'title' => 'Genuine Editorial Placements',
-                    'desc'  => 'Your link appears naturally within real content — not in a sponsored post directory or hidden footer.',
+                    'desc' => 'Your link appears naturally within real content — not in a sponsored post directory or hidden footer.',
                 ),
                 array(
                     'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
                     'title' => 'Transparent Reporting',
-                    'desc'  => 'You\'ll receive a placement report with the live URL, anchor text, DR, and traffic data for every link delivered.',
+                    'desc' => 'You\'ll receive a placement report with the live URL, anchor text, DR, and traffic data for every link delivered.',
                 ),
                 array(
                     'icon' => '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
                     'title' => 'Niche Relevance',
-                    'desc'  => 'We match your backlinks to websites relevant to your industry, so the links carry context as well as authority.',
+                    'desc' => 'We match your backlinks to websites relevant to your industry, so the links carry context as well as authority.',
                 ),
             );
             ?>
@@ -366,30 +382,40 @@ get_header();
             <!-- Row 1: 2 cards centred -->
             <div class="row justify-content-center" style="gap:0;margin-bottom:24px;">
                 <?php foreach (array_slice($features, 0, 2) as $i => $f): ?>
-                <div class="col-12 col-md-6 col-lg-5" style="padding:12px;" data-aos="fade-up" data-aos-delay="<?php echo $i * 100; ?>">
-                    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
-                        <div style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
-                            <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <div class="col-12 col-md-6 col-lg-5" style="padding:12px;" data-aos="fade-up"
+                        data-aos-delay="<?php echo $i * 100; ?>">
+                        <div
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
+                            <div
+                                style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
+                                <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                            </div>
+                            <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;">
+                                <?php echo esc_html($f['title']); ?></h3>
+                            <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;">
+                                <?php echo esc_html($f['desc']); ?></p>
                         </div>
-                        <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;"><?php echo esc_html($f['title']); ?></h3>
-                        <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;"><?php echo esc_html($f['desc']); ?></p>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
 
             <!-- Row 2: 3 cards -->
             <div class="row justify-content-center">
                 <?php foreach (array_slice($features, 2, 3) as $i => $f): ?>
-                <div class="col-12 col-md-6 col-lg-4" style="padding:12px;" data-aos="fade-up" data-aos-delay="<?php echo ($i + 2) * 100; ?>">
-                    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
-                        <div style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
-                            <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <div class="col-12 col-md-6 col-lg-4" style="padding:12px;" data-aos="fade-up"
+                        data-aos-delay="<?php echo ($i + 2) * 100; ?>">
+                        <div
+                            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:36px 32px;height:100%;">
+                            <div
+                                style="width:60px;height:60px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:#fff;">
+                                <?php echo $f['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                            </div>
+                            <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;">
+                                <?php echo esc_html($f['title']); ?></h3>
+                            <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;">
+                                <?php echo esc_html($f['desc']); ?></p>
                         </div>
-                        <h3 class="heading text-22" style="color:#fff;margin-bottom:12px;"><?php echo esc_html($f['title']); ?></h3>
-                        <p class="text text-16" style="color:rgba(255,255,255,.65);margin:0;line-height:1.7;"><?php echo esc_html($f['desc']); ?></p>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
 
@@ -403,29 +429,35 @@ get_header();
                 <h2 class="heading text-50" data-aos="fade-up" style="color:#fff;margin-bottom:20px;">
                     <?php esc_html_e('Ready to Build an Authority Backlink Profile?', 'digitalgrowth'); ?>
                 </h2>
-                <p class="text text-18" data-aos="fade-up" data-aos-delay="50" style="color:rgba(255,255,255,.8);margin-bottom:40px;line-height:1.8;">
+                <p class="text text-18" data-aos="fade-up" data-aos-delay="50"
+                    style="color:rgba(255,255,255,.8);margin-bottom:40px;line-height:1.8;">
                     <?php esc_html_e('Every day without quality backlinks is a day your competitors are pulling further ahead. Start building your site\'s authority today with genuine, high-quality placements that deliver lasting SEO results.', 'digitalgrowth'); ?>
                 </p>
-                <div class="buttons" data-aos="fade-up" data-aos-delay="100" style="justify-content:center;flex-wrap:wrap;gap:16px;">
-                    <a href="<?php echo esc_url(home_url('/contact/')); ?>"
-                        class="button button--primary"
+                <div class="buttons" data-aos="fade-up" data-aos-delay="100"
+                    style="justify-content:center;flex-wrap:wrap;gap:16px;">
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
                         aria-label="<?php esc_attr_e('View Backlink Plans', 'digitalgrowth'); ?>"
                         style="background:#fff;color:#1C2539;">
                         <?php esc_html_e('View Backlink Plans', 'digitalgrowth'); ?>
                         <span class="svg-wrapper">
-                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z" fill="CurrentColor"/>
+                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
+                                    fill="CurrentColor" />
                             </svg>
                         </span>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/contact/')); ?>"
-                        class="button"
+                    <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button"
                         aria-label="<?php esc_attr_e('Book a Free Consultation', 'digitalgrowth'); ?>"
                         style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);">
                         <?php esc_html_e('Book a Free Consultation', 'digitalgrowth'); ?>
                         <span class="svg-wrapper">
-                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z" fill="CurrentColor"/>
+                            <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
+                                    fill="CurrentColor" />
                             </svg>
                         </span>
                     </a>
