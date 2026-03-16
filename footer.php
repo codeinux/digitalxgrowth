@@ -138,6 +138,8 @@
                     class="text text-16 link"><?php esc_html_e('Privacy Policy', 'digitalgrowth'); ?></a></li>
                 <li><a href="<?php echo esc_url(home_url('/terms-conditions/')); ?>"
                     class="text text-16 link"><?php esc_html_e('Terms & Conditions', 'digitalgrowth'); ?></a></li>
+                <li><a href="<?php echo esc_url(home_url('/refund-policy/')); ?>"
+                    class="text text-16 link"><?php esc_html_e('Refund Policy', 'digitalgrowth'); ?></a></li>
               </ul>
             </div>
           </div>
@@ -163,6 +165,8 @@
                 class="text text-16 link"><?php esc_html_e('Developed by Flixoye', 'digitalgrowth'); ?></a></li>
             <li><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>"
                 class="text text-16 link"><?php esc_html_e('Privacy Policy', 'digitalgrowth'); ?></a></li>
+            <li><a href="<?php echo esc_url(home_url('/refund-policy/')); ?>"
+                class="text text-16 link"><?php esc_html_e('Refund Policy', 'digitalgrowth'); ?></a></li>
             <li><a href="<?php echo esc_url(home_url('/contact/')); ?>"
                 class="text text-16 link"><?php esc_html_e('Contact', 'digitalgrowth'); ?></a></li>
           </ul>

@@ -222,7 +222,7 @@ get_header();
                 </ul>
                 <p>Perfect if you want to know exactly where your site stands before investing further.</p>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=88')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,7 +354,7 @@ get_header();
                 <p>🚀 Our most popular plan — because it gives you everything you need to move forward with confidence.
                 </p>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=89')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,7 +506,7 @@ get_header();
                 </ul>
                 <p>For businesses serious about growth — detailed, expert-led, and built to scale.</p>
                 <div class="buttons" data-aos="fade-up">
-                  <a href="<?php echo esc_url(home_url('/pricing-plan/')); ?>" class="button button--primary"
+                  <a href="<?php echo esc_url(home_url('/?add-to-cart=90')); ?>" class="button button--primary"
                     aria-label="<?php esc_attr_e('Choose Package', 'digitalgrowth'); ?>">
                     <?php esc_html_e('Choose Package', 'digitalgrowth'); ?>
                     <svg viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">

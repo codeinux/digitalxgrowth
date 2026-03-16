@@ -512,3 +512,9 @@ function digitalgrowth_manage_woocommerce_styles()
 	}
 }
 add_action('wp_enqueue_scripts', 'digitalgrowth_manage_woocommerce_styles', 9999);
+
+// -------------------------------------------------------
+// WooCommerce: Remove Product Links (Virtual Packages)
+// -------------------------------------------------------
+add_filter('woocommerce_cart_item_permalink', '__return_false');
+add_filter('woocommerce_order_item_permalink', '__return_false');

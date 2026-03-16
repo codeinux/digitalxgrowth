@@ -7183,3 +7183,138 @@ footer .logo-with-newsletter .social-link:hover {
 	color: #fff !important;
 	transform: translateY(-2px) !important;
 }
+
+/* =======================================================
+   WooCommerce Order Received / Thank You Page Styling
+   ======================================================= */
+.woocommerce-checkout .entry-title {
+    font-family: var(--font-heading--family, "Poppins", sans-serif);
+    color: var(--color-foreground-heading, #1c2539);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.woocommerce-order {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.woocommerce-order p.woocommerce-notice.woocommerce-thankyou-order-received {
+    font-family: var(--font-body--family, "Inter", sans-serif);
+    font-size: 18px;
+    color: var(--color-foreground);
+    margin-bottom: 30px;
+    padding: 15px 25px;
+    background: rgba(81, 79, 160, 0.05);
+    border-left: 4px solid rgba(81, 79, 160, 1);
+    border-radius: 6px;
+}
+
+.woocommerce-order h2 {
+    font-family: var(--font-heading--family, "Poppins", sans-serif);
+    color: var(--color-foreground-heading);
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+ul.woocommerce-order-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 25px;
+    margin: 0 0 40px 0;
+    background: rgba(242, 242, 242, 0.6);
+    border-radius: 12px;
+}
+
+ul.woocommerce-order-overview li {
+    flex: 1 1 200px;
+    font-size: 14px;
+    color: var(--color-foreground, #555);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    ul.woocommerce-order-overview li {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 15px;
+    }
+}
+
+ul.woocommerce-order-overview li:last-child {
+    border-right: none;
+    border-bottom: none;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+ul.woocommerce-order-overview li strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-foreground-heading, #111);
+    font-size: 18px;
+    text-transform: none;
+}
+
+.woocommerce-table--order-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.woocommerce-table--order-details th,
+.woocommerce-table--order-details td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.woocommerce-table--order-details thead th {
+    background: rgba(81, 79, 160, 0.04);
+    color: var(--color-foreground-heading);
+    font-family: var(--font-heading--family, "Poppins", sans-serif);
+    font-weight: 600;
+}
+
+.woocommerce-table--order-details tbody td {
+    color: var(--color-foreground);
+    font-family: var(--font-body--family, "Inter", sans-serif);
+}
+
+.woocommerce-table--order-details tfoot th {
+    text-align: right;
+    color: var(--color-foreground-heading);
+    font-weight: 600;
+}
+
+.woocommerce-table--order-details tfoot tr:last-child th,
+.woocommerce-table--order-details tfoot tr:last-child td {
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-foreground-heading);
+}
+
+.woocommerce-customer-details address {
+    padding: 25px;
+    background: rgba(242, 242, 242, 0.3);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    line-height: 1.8;
+    color: var(--color-foreground);
+    font-family: var(--font-body--family, "Inter", sans-serif);
+    font-style: normal;
+}

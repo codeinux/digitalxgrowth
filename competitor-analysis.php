@@ -207,6 +207,7 @@ get_header();
                                 'desc' => 'Best for: Small businesses and local brands wanting a clear snapshot of their competitive landscape.',
                                 'price' => '₹3,999',
                                 'active' => false,
+                                'cart_id' => 91,
                                 'items' => array(
                                     'Detailed reports on your top 5 competitors',
                                     'Keyword & content gap analysis',
@@ -220,6 +221,7 @@ get_header();
                                 'desc' => 'Best for: Growing businesses and agencies that need deeper data to build a strong, long-term SEO strategy.',
                                 'price' => '₹6,999',
                                 'active' => true,
+                                'cart_id' => 92,
                                 'items' => array(
                                     'Analyse 10 competitors across keywords, backlinks, traffic & content',
                                     'Comprehensive view of your entire niche',
@@ -233,6 +235,7 @@ get_header();
                                 'desc' => 'Best for: SEO professionals, e-commerce brands, and businesses in competitive industries that need the full picture.',
                                 'price' => '₹9,999',
                                 'active' => false,
+                                'cart_id' => 93,
                                 'items' => array(
                                     'Deep analysis across 15 competitors',
                                     'Data-rich insights for dominant SEO strategy',
@@ -279,7 +282,7 @@ get_header();
                                         <?php echo esc_html($plan['tagline']); ?>
                                     </p>
                                     <div class="buttons" data-aos="fade-up">
-                                        <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+                                        <a href="<?php echo esc_url(home_url('/?add-to-cart=' . intval($plan['cart_id']))); ?>"
                                             class="button button--primary"
                                             aria-label="<?php esc_attr_e('Order Reports', 'digitalgrowth'); ?>">
                                             <?php esc_html_e('Order Reports', 'digitalgrowth'); ?>

@@ -207,6 +207,7 @@ get_header();
                                 'desc' => 'Best for: New websites, local businesses, and startups building their backlink profile from the ground up.',
                                 'price' => '₹5,499',
                                 'active' => false,
+                                'cart_id' => 94,
                                 'items' => array(
                                     'Minimum Domain Rating of 10+',
                                     'Site traffic of up to 1,000 monthly visitors',
@@ -222,6 +223,7 @@ get_header();
                                 'desc' => 'Best for: Growing businesses and service-based brands that want to compete seriously in their niche.',
                                 'price' => '₹10,499',
                                 'active' => true,
+                                'cart_id' => 95,
                                 'items' => array(
                                     'Minimum Domain Rating of 30+',
                                     'Site traffic between 1,000–10,000 monthly visitors',
@@ -237,6 +239,7 @@ get_header();
                                 'desc' => 'Best for: Established brands, e-commerce stores, and businesses targeting competitive, high-value keywords.',
                                 'price' => '₹16,499',
                                 'active' => false,
+                                'cart_id' => 96,
                                 'items' => array(
                                     'Minimum Domain Rating of 50+',
                                     'Site traffic between 10,000–50,000 monthly visitors',
@@ -287,7 +290,7 @@ get_header();
                                         <?php echo esc_html($plan['tagline']); ?>
                                     </p>
                                     <div class="buttons" data-aos="fade-up">
-                                        <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+                                        <a href="<?php echo esc_url(home_url('/?add-to-cart=' . intval($plan['cart_id']))); ?>"
                                             class="button button--primary"
                                             aria-label="<?php esc_attr_e('Order Backlink', 'digitalgrowth'); ?>">
                                             <?php esc_html_e('Order Backlink', 'digitalgrowth'); ?>
