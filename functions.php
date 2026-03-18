@@ -245,6 +245,16 @@ add_action('widgets_init', 'digitalgrowth_widgets_init');
 
 
 // -------------------------------------------------------
+// Mail: Custom Sender Name & Email (replaces default "WordPress")
+// -------------------------------------------------------
+add_filter('wp_mail_from_name', function () {
+	return 'Digital Growth';
+});
+add_filter('wp_mail_from', function () {
+	return 'savitha@digitalxgrowth.com';
+});
+
+// -------------------------------------------------------
 // Contact Form AJAX Handler
 // -------------------------------------------------------
 function digitalgrowth_handle_contact()
