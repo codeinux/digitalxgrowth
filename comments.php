@@ -109,7 +109,7 @@ if (post_password_required()) {
 					'title_reply_after' => '',
 					'cancel_reply_before' => '',
 					'cancel_reply_after' => '',
-					'must_log_in' => '<p class="must-log-in text text-16">' . sprintf(esc_html__('You must be <a href="%s">logged in</a> to post a comment.', 'digitalgrowth'), esc_url(wp_login_url(get_permalink()))) . '</p>',
+					'must_log_in' => '<p class="must-log-in text text-16">' . sprintf(wp_kses(__('You must be <a href="%s">logged in</a> to post a comment.', 'digitalgrowth'), array('a' => array('href' => array()))), esc_url(wp_login_url(get_permalink()))) . '</p>',
 					'comment_notes_before' => '',
 					'comment_notes_after' => '',
 					'fields' => array(

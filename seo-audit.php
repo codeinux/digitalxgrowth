@@ -17,8 +17,8 @@ get_header();
           <div class="col-12 col-lg-6">
             <picture class="choose-media radius18" data-aos="fade-right">
               <source media="(max-width: 575px)"
-                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg"
+                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/service/seoaudit.jpg">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/service/seoaudit.jpg"
                 alt="<?php esc_attr_e('Why Choose Us', 'digitalgrowth'); ?>" width="1000" height="742" loading="lazy">
             </picture>
           </div>
@@ -124,7 +124,6 @@ get_header();
                   </p>
                   <div class="pricing-box">
                     <span class="subheading text-50 fw-600">₹7,999</span>
-                    <span class="subheading subheading-monthly text-16 fw-400">/Monthly</span>
                   </div>
                 </div>
                 <ul class="text-lists list-unstyled">
@@ -568,8 +567,8 @@ get_header();
 
         <div class="buttons" data-aos="fade-up" data-aos-delay="100">
           <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
-            aria-label="<?php esc_attr_e('Book a Free Consultation', 'digitalgrowth'); ?>">
-            <?php esc_html_e('Book a Free Consultation', 'digitalgrowth'); ?>
+            aria-label="<?php esc_attr_e('Get in Touch', 'digitalgrowth'); ?>">
+            <?php esc_html_e('Get in Touch', 'digitalgrowth'); ?>
             <span class="svg-wrapper">
               <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -688,7 +687,7 @@ get_header();
                 ),
                 array(
                   'q' => 'How do I get started?',
-                  'a' => 'Simply choose a plan above or book a free consultation call. I\'ll review your website briefly before the call so we can hit the ground running.'
+                  'a' => 'Simply choose a plan above or Get in Touch call. I\'ll review your website briefly before the call so we can hit the ground running.'
                 ),
               );
               $delay = 0;

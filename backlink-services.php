@@ -221,7 +221,7 @@ get_header();
                                 'name' => '🔸 Growth Backlink ⭐ Most Popular',
                                 'badge' => 'DR 30+ | Monthly Traffic: 1k–10k',
                                 'desc' => 'Best for: Growing businesses and service-based brands that want to compete seriously in their niche.',
-                                'price' => '₹10,499',
+                                'price' => '₹11,499',
                                 'active' => true,
                                 'cart_id' => 95,
                                 'items' => array(
@@ -237,7 +237,7 @@ get_header();
                                 'name' => '🔷 Premium Backlink',
                                 'badge' => 'DR 50+ | Monthly Traffic: 10k–50k',
                                 'desc' => 'Best for: Established brands, e-commerce stores, and businesses targeting competitive, high-value keywords.',
-                                'price' => '₹16,499',
+                                'price' => '₹23,499',
                                 'active' => false,
                                 'cart_id' => 96,
                                 'items' => array(
@@ -452,9 +452,9 @@ get_header();
                         </span>
                     </a>
                     <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button"
-                        aria-label="<?php esc_attr_e('Book a Free Consultation', 'digitalgrowth'); ?>"
+                        aria-label="<?php esc_attr_e('Get in Touch', 'digitalgrowth'); ?>"
                         style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);">
-                        <?php esc_html_e('Book a Free Consultation', 'digitalgrowth'); ?>
+                        <?php esc_html_e('Get in Touch', 'digitalgrowth'); ?>
                         <span class="svg-wrapper">
                             <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

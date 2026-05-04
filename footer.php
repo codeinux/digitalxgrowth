@@ -32,7 +32,7 @@
               </p>
               <!-- Social Icons -->
               <ul class="social-icons list-unstyled" data-aos="fade-up" data-aos-anchor=".footer-top">
-                <?php if ($fb = get_theme_mod('social_facebook', 'https://web.facebook.com/')): ?>
+                <?php if ($fb = get_theme_mod('social_facebook', 'https://www.facebook.com/profile.php?id=61553586252974')): ?>
                   <li>
                     <a class="social-link text" href="<?php echo esc_url($fb); ?>" aria-label="Facebook" target="_blank"
                       rel="noopener noreferrer">
@@ -45,7 +45,7 @@
                     </a>
                   </li>
                 <?php endif; ?>
-                <?php if ($li = get_theme_mod('social_linkedin', 'https://www.linkedin.com/')): ?>
+                <?php if ($li = get_theme_mod('social_linkedin', 'https://www.linkedin.com/in/savitha-bs-774023295/')): ?>
                   <li>
                     <a class="social-link text" href="<?php echo esc_url($li); ?>" aria-label="LinkedIn" target="_blank"
                       rel="noopener noreferrer">
@@ -58,20 +58,8 @@
                     </a>
                   </li>
                 <?php endif; ?>
-                <?php if ($tw = get_theme_mod('social_twitter', 'https://x.com/')): ?>
-                  <li>
-                    <a class="social-link text" href="<?php echo esc_url($tw); ?>" aria-label="Twitter / X"
-                      target="_blank" rel="noopener noreferrer">
-                      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M17.5104 1.71289C16.8743 1.9943 16.1996 2.17914 15.5088 2.26127C16.2366 1.82561 16.7812 1.14026 17.0411 0.332886C16.3573 0.739186 15.6088 1.02515 14.8282 1.17835C14.1693 0.475394 13.2483 0.0770356 12.2848 0.0781272C10.3605 0.0781272 8.79975 1.63835 8.79975 3.56354C8.79975 3.83666 8.83109 4.10153 8.88967 4.35709C5.99206 4.21121 3.42506 2.82455 1.70565 0.715686C1.39608 1.24757 1.23338 1.85216 1.2342 2.46757C1.2342 3.67667 1.84967 4.74388 2.78458 5.36868C2.23115 5.35118 1.6899 5.20171 1.20599 4.93262C1.20545 4.94726 1.20545 4.9619 1.20545 4.97574C1.20545 6.66484 2.40683 8.07384 4.00166 8.39376C3.70234 8.47476 3.3936 8.51568 3.08352 8.51543C2.85831 8.51543 2.63976 8.49468 2.42733 8.45393C2.8711 9.83826 4.15739 10.8461 5.683 10.8738C4.44845 11.8427 2.92391 12.3683 1.35453 12.3661C1.07677 12.3663 0.799246 12.3499 0.523438 12.3171C2.1167 13.3413 3.97127 13.8849 5.86535 13.8829C12.2763 13.8829 15.7817 8.57243 15.7817 3.9671C15.7817 3.81643 15.778 3.66523 15.7713 3.51615C16.4536 3.02322 17.0425 2.41257 17.5104 1.71289Z"
-                          fill="currentColor" />
-                      </svg>
-                      <span class="visually-hidden"><?php esc_html_e('Twitter / X', 'digitalgrowth'); ?></span>
-                    </a>
-                  </li>
-                <?php endif; ?>
-                <?php if ($ig = get_theme_mod('social_instagram', 'https://www.instagram.com/')): ?>
+
+                <?php if ($ig = get_theme_mod('social_instagram', 'https://www.instagram.com/digitalxgrowth1')): ?>
                   <li>
                     <a class="social-link text" href="<?php echo esc_url($ig); ?>" aria-label="Instagram" target="_blank"
                       rel="noopener noreferrer">
@@ -120,8 +108,6 @@
                     class="text text-16 link"><?php esc_html_e('High-Authority Backlinks', 'digitalgrowth'); ?></a>
                 </li>
                 <li><a href="<?php echo esc_url(home_url('/services/')); ?>"
-                    class="text text-16 link"><?php esc_html_e('Digital Marketing', 'digitalgrowth'); ?></a></li>
-                <li><a href="<?php echo esc_url(home_url('/services/')); ?>"
                     class="text text-16 link"><?php esc_html_e('Web Development', 'digitalgrowth'); ?></a></li>
               </ul>
             </div>
@@ -136,7 +122,7 @@
                     class="text text-16 link"><?php esc_html_e('About Me', 'digitalgrowth'); ?></a></li>
                 <li><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>"
                     class="text text-16 link"><?php esc_html_e('Privacy Policy', 'digitalgrowth'); ?></a></li>
-                <li><a href="<?php echo esc_url(home_url('/terms-conditions/')); ?>"
+                <li><a href="<?php echo esc_url(home_url('/terms-and-conditions/')); ?>"
                     class="text text-16 link"><?php esc_html_e('Terms & Conditions', 'digitalgrowth'); ?></a></li>
                 <li><a href="<?php echo esc_url(home_url('/refund-policy/')); ?>"
                     class="text text-16 link"><?php esc_html_e('Refund Policy', 'digitalgrowth'); ?></a></li>

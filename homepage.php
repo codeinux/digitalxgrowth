@@ -236,14 +236,14 @@ get_header();
 
                 <h3 class="title text text-22 fw-600"><?php esc_html_e('Ambition', 'digitalgrowth'); ?></h3>
                 <div class="text text-16">
-                  <?php esc_html_e('Businesses of all sizes thrive with our business solutions.', 'digitalgrowth'); ?>
+                  <?php esc_html_e('To help every business get found on Google and grow without depending on paid ads.', 'digitalgrowth'); ?>
                 </div>
               </li>
               <li class="text-item text text-18" data-aos="fade-up" data-aos-delay="200">
 
                 <h3 class="title text text-22 fw-600"><?php esc_html_e('Purpose', 'digitalgrowth'); ?></h3>
                 <div class="text text-16">
-                  <?php esc_html_e('Businesses of all sizes thrive with our business solutions.', 'digitalgrowth'); ?>
+                  <?php esc_html_e('To create real, lasting visibility for businesses through honest, AI-powered SEO strategies.', 'digitalgrowth'); ?>
                 </div>
               </li>
             </ul>
@@ -1247,17 +1247,16 @@ get_header();
                 </p>
                 <div class="user-info-wrap">
                   <div class="user-info">
-                    <div class="user-img">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/testimonial/1.jpg"
-                        width="80" height="80" loading="lazy"
-                        alt="<?php esc_attr_e('Harold Fernandes', 'digitalgrowth'); ?>">
-                    </div>
+
                     <div class="user-name-desig">
                       <h2 class="user-name heading text-24">
-                        <?php esc_html_e('Harold Fernandes', 'digitalgrowth'); ?>
+                        <a href="https://www.linkedin.com/in/harold-fernandes/" target="_blank"
+                          rel="noopener noreferrer">
+                          <?php esc_html_e('Harold Fernandes', 'digitalgrowth'); ?>
+                        </a>
                       </h2>
                       <div class="user-desig text text-18">
-                        <?php esc_html_e('Bar and Bench', 'digitalgrowth'); ?>
+                        <?php esc_html_e('Swiss Learning Exchange -COO', 'digitalgrowth'); ?>
                       </div>
                     </div>
                   </div>
@@ -1323,16 +1322,17 @@ get_header();
                 </p>
                 <div class="user-info-wrap">
                   <div class="user-info">
-                    <div class="user-img">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/testimonial/2.jpg"
-                        width="80" height="80" loading="lazy" alt="<?php esc_attr_e('R Karthik', 'digitalgrowth'); ?>">
-                    </div>
+
                     <div class="user-name-desig">
                       <h2 class="user-name heading text-24">
-                        <?php esc_html_e('R Karthik', 'digitalgrowth'); ?>
+                        <a href="https://www.linkedin.com/in/r-karthik-82373a41/" target="_blank"
+                          rel="noopener noreferrer">
+                          <?php esc_html_e('R Karthik', 'digitalgrowth'); ?>
+                        </a>
                       </h2>
                       <div class="user-desig text text-18">
-                        <?php esc_html_e('Product Manager', 'digitalgrowth'); ?>
+                        <?php esc_html_e('Swiss Learning Exchange - Head - Strategic Partnerships and Alliances
+', 'digitalgrowth'); ?>
                       </div>
                     </div>
                   </div>
@@ -1392,22 +1392,17 @@ get_header();
                   </li>
                 </ul>
                 <p class="text text-24">
-                  “ Savitha has played a pivotal role in shaping the website design, resolving technical issues, and
-                  setting up the analytics and search console for all domains. As an SEO specialist, she managed
-                  off-page activities for one of our products, the Learning Management System (LMS). Additionally, she
-                  successfully created over 20 links from sites with a Domain Authority (DA) of 70 or higher through
-                  email outreach. ”
+                  “Savitha has been our SEO partner for almost a year. She is reliable, methodical and genuinely
+                  understands what it takes to improve search visibility. Her strategies are practical and
+                  results-driven. I would confidently recommend her to any business looking to grow its online presence
+                  through SEO. ”
 
                 </p>
                 <div class="user-info-wrap">
                   <div class="user-info">
-                    <div class="user-img">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/testimonial/3.jpg"
-                        width="80" height="80" loading="lazy"
-                        alt="<?php esc_attr_e('Tondu Hosen', 'digitalgrowth'); ?>">
-                    </div>
+
                     <div class="user-name-desig">
-                      <h2 class="user-name heading text-24"><?php esc_html_e('Tondu Hosen', 'digitalgrowth'); ?></h2>
+                      <h2 class="user-name heading text-24"><?php esc_html_e('Amith Sharma', 'digitalgrowth'); ?></h2>
                       <div class="user-desig text text-18"><?php esc_html_e('CEO & Owner', 'digitalgrowth'); ?></div>
                     </div>
                   </div>

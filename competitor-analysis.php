@@ -17,8 +17,8 @@ get_header();
                     <div class="col-12 col-lg-6">
                         <picture class="choose-media radius18" data-aos="fade-right">
                             <source media="(max-width: 575px)"
-                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/why-choose-us/1.jpg"
+                                srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/service/canalysis.jpg">
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/imgs/service/canalysis.jpg"
                                 alt="<?php esc_attr_e('Competitor Analysis Services', 'digitalgrowth'); ?>" width="1000"
                                 height="742" loading="lazy">
                         </picture>
@@ -40,8 +40,8 @@ get_header();
                             </p>
                             <div class="buttons" data-aos="fade-up">
                                 <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
-                                    aria-label="<?php esc_attr_e('Order Now', 'digitalgrowth'); ?>">
-                                    <?php esc_html_e('Order Now', 'digitalgrowth'); ?>
+                                    aria-label="<?php esc_attr_e('Get in Touch', 'digitalgrowth'); ?>">
+                                    <?php esc_html_e('Get in Touch', 'digitalgrowth'); ?>
                                     <span class="svg-wrapper">
                                         <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -351,8 +351,8 @@ get_header();
 
                 <div class="buttons" data-aos="fade-up" data-aos-delay="100">
                     <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button button--primary"
-                        aria-label="<?php esc_attr_e('Order Now', 'digitalgrowth'); ?>">
-                        <?php esc_html_e('Order Now', 'digitalgrowth'); ?>
+                        aria-label="<?php esc_attr_e('Get in Touch', 'digitalgrowth'); ?>">
+                        <?php esc_html_e('Get in Touch', 'digitalgrowth'); ?>
                         <span class="svg-wrapper">
                             <svg class="icon-20" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
